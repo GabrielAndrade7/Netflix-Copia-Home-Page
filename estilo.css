@@ -1,0 +1,599 @@
+:root{
+    --default-border-radius: 5px;
+    --border-color: rgb(204 204 204 / .6);
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+body p{
+    font-size: 1.2em;
+}
+
+.top-hero{
+    background-image: radial-gradient(rgb(0 0 0 / .3),rgb(0 0 0 / .9)), 
+                    url(assets/imagens/capas8.webp);
+    background-size:cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6em 0;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-logo img{
+    width: 6.25em;
+}
+
+.idioma-entrar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.idiomas{
+    height: 2.2em;
+    outline: none;
+    border-radius: var(--default-border-radius);
+    border: .1em solid var(--border-color);
+    color: white;
+    background-color: rgb(0 0 0 / 0.8);
+    margin-right: .5em;
+}
+
+.idioma1{
+    width: 4em;
+}
+
+.idioma2{
+    text-align: right;
+    width: 9em;
+    display: none;
+}
+
+.idioma3{
+    text-align: right;
+    width: 9em;
+}
+
+.idioma-entrar::after{
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 1em;
+    height: 1em;
+    background-image: url(assets/icomoon/SVG/sphere.svg);
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    background-size: contain;
+}
+
+.btn{
+    border: none;
+    background-color: rgb(229 9 20);
+    color: white;
+    border-radius: var(--default-border-radius);
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(193 17 25);
+}
+
+.entrar{
+    padding: .5em 1em;
+    font-size: .9em;
+    font-weight:550;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3em auto 0 auto;
+    text-align: center;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.hero-content h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-content span{
+    font-weight: 400;
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+.hero-content p{
+    margin: 0;
+}
+
+.hero-content_cadastro{
+    margin-top: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7em;
+    padding: 1em 0 2em 0;
+    width: 80%;
+    max-width: 38.125em;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.email-input{
+    width: 100%;
+    height: 3.5em;
+    padding-left:1em;
+    border: 1px solid var(--border-color);
+    border-radius: var(--default-border-radius);
+    background-color: rgba(51, 51, 51, 0.418);
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+}
+
+.email-input:focus{
+    outline-offset: 2px;
+    outline: 2px solid white;
+    padding: 1em 0 0 1em;
+}
+
+.hero-content_cadastro::after{
+    content: "Email";
+    color: var(--border-color);
+    top: 1.875em;
+    left: 1em;
+    position: absolute;
+}
+
+.hero-content_cadastro:has(.email-input:focus)::after{
+    font-size: .8em;
+    top: 1.5em;
+}
+
+.email-btn{
+    font-size: 1.2em;
+    font-weight:600 ;
+    width: 7em;
+    height: 2.5em;
+    padding-right: 1em ;
+}
+
+.email-btn_container{
+    width: fit-content;
+    position: relative;
+}
+
+.seta::before{
+    content: "";
+    position: absolute;
+    top: .5em;
+    right:.5em;
+    width: 2em;
+    height: 2em;
+    background-image: url(assets/imagens/ctrl.svg);
+    filter: invert(100%);
+    background-size: cover;
+    pointer-events: none;
+}
+
+
+
+.main{
+    background-color: black;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    margin: .7em 0;
+    font-size: 1.3em;
+}
+
+.saiba-mais{
+    width: 90%;
+    background-image: radial-gradient(ellipse at top center, rgb(212 11 25), rgb(13 24 65) 75%);
+    margin: 1em auto;
+    border-radius: var(--default-border-radius);
+    box-sizing: border-box;
+    padding: 1.6em;
+    position: relative;
+    text-align: left;
+}
+
+.saiba-mais_container{
+    width: 90%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: .8em;
+}
+
+.saiba-mais_pipoca img{
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: -1.5em;
+    left: 3em;
+    z-index: 2;
+}
+
+.saiba-mais p{
+    margin:0;
+}
+
+.saiba-mais_link{
+    margin-top: 1em;
+}
+
+.saiba-mais_link a{
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.main-content{
+    text-align: center;
+    position: relative;
+    padding: 0 1em;
+}
+
+.bordaCinza{
+    width: 100%;
+    height: .5em;
+    background-color: rgb(35 35 35);
+}
+
+.image-container{
+    width: 100%;
+    height: 100%;
+}
+
+.download-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download{
+    position: absolute;
+    top: 65%;
+    width: 75%;
+    max-width:37.5em ;
+    height: 70px;
+    background-color: black;
+    border-radius: 8px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.download-img{
+    height: 100%;
+}
+
+.download-img img{
+    height: 100%;
+}
+
+.download-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: .85em;
+    margin-left: 10px;
+}
+.download-text p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.download-text span{
+    color: rgb(0 74 154);
+}
+
+.download-gif{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:right;
+}
+
+.download-gif img{
+    height: 60%;
+}
+
+.main-image,
+.main-video{
+    width: 80%;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.card3{
+    position: relative;
+}
+
+
+.faq-container{
+    background-color: black;
+}
+
+.faq-container h1{
+    margin: 0;
+    padding: 1.7em 0 .7em 0;
+}
+
+.faq-card{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: .5em;
+}
+
+.faq{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35 35 35);
+    width: 90%;
+    margin-bottom: 1px;
+    text-align: left;
+    padding: .5em 1.5em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.faq:hover{
+    cursor: pointer;
+    background-color: rgb(65 65 65);
+}
+
+.faq-x{
+    position: relative;
+}
+
+.faq-x::before{
+    content: "";
+    width: 1.1em;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.faq-x::after{
+    content: "";
+    width: 1.1em;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    transform-origin: bottom;
+    transform: rotate(90deg) translateX(-1px) translateY(1px);
+    top: 0;
+    right: 0;
+}
+
+.hide:checked+.faq .faq-x::before{
+    transform: rotate(45deg);
+}
+
+.hide:checked+.faq .faq-x::after{
+    transform: rotate(-45deg);
+}
+
+.hide{
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.faq-answer_container{
+    background-color:rgb(35 35 35);
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    text-align: left;
+    
+}
+
+.faq-card:has(.hide:checked)+.faq-answer_container{
+    max-height: 100vh;
+    padding: 1em;
+}
+
+.footer{
+    background-color: black;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.footer span{
+    color: var(--border-color);
+    font-weight: 600;
+}
+
+.footer-duvidas a{
+    color: var(--border-color);
+}
+
+.footer .footer-map{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.footer .footer-map li a{
+    color: var(--border-color);
+    font-size: .85em;
+}
+
+.footer .idioma2{
+    width: fit-content;
+}
+
+@media screen and (min-width:37.5em){
+    .idioma1{
+        display: none;
+    }  
+    .idioma2{
+        display: initial;
+    }
+
+    .hero-content_cadastro{
+        flex-direction: row;
+    }
+
+    .saiba-mais_content{
+        padding-left: 5em;
+        box-sizing: border-box;
+    }
+
+    .saiba-mais_pipoca img{
+        width: 4em;
+        height: 4em;
+        top:3em; 
+        left: initial; 
+    }
+
+    .footer .footer-map{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:60em){
+    .header{
+        margin-bottom: 8em;
+    }
+    .header-logo img{
+        width: 10em;
+    }
+
+    .header .idioma-entrar{
+        padding: 1em;
+    }
+
+    .header .idioma-entrar::after{
+        top: initial;
+        left: 1.5em;
+    }
+    
+    .hero-content h1,
+    h1{
+        font-size: 3em;
+    }
+    .hero-content span{
+        font-size: 1.5rem;
+    }
+
+    .main-content{
+        padding: 2em 2em;
+    }
+
+    .main-content p{
+        font-size: 1.5em;
+    }
+
+    .main .main-content:nth-child(2),
+    .main .main-content:nth-child(6){
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .main .main-content:nth-child(4),
+    .main .main-content:nth-child(8){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .image-container{
+        width: 100%;
+        
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .main-image,
+    .main-video{
+        width: 100%;
+        flex: 1;
+    }
+    
+}
+
+@media screen and (min-width:72.5em){
+    .header,
+    .hero-content,
+    .hero-content_cadastro,
+    .saiba-mais,
+    .main-content{
+        width: 80%;
+    }
+
+    .main-content{
+        margin: 0 auto;
+    }
+
+    .top-hero{
+        padding-bottom: 3em;
+    }
+}
+
+
+
+
+
+
